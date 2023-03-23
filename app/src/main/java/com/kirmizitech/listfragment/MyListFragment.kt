@@ -29,8 +29,11 @@ class MyListFragment : ListFragment() {
 
         //Wrap with '?.let { ... }' call
         //önce etkinlik parametresi kontrol edilecek ve boş değilse {içerisindeki kod çalışacaktır}
+        //it : anahtar kelime aynı zamanda activity parametresini de temsil eder
         val arrayAdapter = activity?.let {
             ArrayAdapter.createFromResource(it,R.array.cities,android.R.layout.simple_list_item_1) }
+
+        listAdapter = arrayAdapter
 
     }
 
