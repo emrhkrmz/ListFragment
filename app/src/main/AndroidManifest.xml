@@ -12,6 +12,9 @@
         android:theme="@style/Theme.ListFragment"
         tools:targetApi="31">
         <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyListFragment"
             android:exported="false" />
         <activity

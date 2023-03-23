@@ -1,5 +1,6 @@
 package com.kirmizitech.listfragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -34,6 +35,15 @@ class MyListFragment : ListFragment() {
             ArrayAdapter.createFromResource(it,R.array.cities,android.R.layout.simple_list_item_1) }
 
         listAdapter = arrayAdapter
+
+        //liste görünümüne tıklama dinleyicisi ekliyoruz
+        listView.setOnItemClickListener { adapterView, view, position, l ->
+
+            val intent = Intent(activity,SecondActivity::class.java)
+            intent.putExtra("position",position)
+            startActivity(intent)
+
+        }
 
     }
 
